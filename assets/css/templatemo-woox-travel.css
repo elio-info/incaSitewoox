@@ -24,8 +24,8 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
-/* 
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+ 
 ---------------------------------------------
 reset
 --------------------------------------------- 
@@ -1007,9 +1007,10 @@ Visit Country Style
 }
 
 .visit-country .item .right-content ul {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 15px 0px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 15px 0px;
+	list-style-type: circle;
 }
 
 .visit-country .item .right-content ul li {
