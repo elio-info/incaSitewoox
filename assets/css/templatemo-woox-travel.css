@@ -856,7 +856,7 @@ Banner Style
   margin: 0 1em;
   padding-top: 1em;
   text-align: left;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-family: Montserrat, sans-serif;
   font-size: 1em;
   color: #f6eac5;
@@ -880,13 +880,34 @@ Banner Style
   margin-left: -100%;
   background: #22b3c1;
 }
-#section-1 .content-slider nav .controls label span.text {
-  font-size: 20px;
+@media (min-width: 1020px) {
+  #section-1 .content-slider nav .controls label span.text {  
+  font-size: 20px; 
   font-weight: 500;
   text-align: center;
   display: inline-block;
-  width: 100%;
+  width: 100%; 
+  }
 }
+@media (min-width: 1000px)  and (max-width: 1019px){
+  #section-1 .content-slider nav .controls label span.text {  
+  font-size: 2vw; 
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  width: 100%; 
+  }
+}
+
+@media (min-width: 100px)  and (max-width: 1000px){
+  #section-1 .content-slider nav .controls label span.text {  
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  width: 100%; 
+  }
+}
+
 #section-1 .content-slider nav .controls label:hover {
   color: #22b3c1;
 }
