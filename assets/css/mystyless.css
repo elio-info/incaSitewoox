@@ -1,6 +1,10 @@
 /**  quita de template-woox-travel se cambio por second-page-heading*/
 .fondoproy{background-image: url(../images/cosas/ver-02-ocsuro.jpg);
 	 }
+
+.fondopers{ background-image:  url(../images/cosas/ver-pers-oscuro.jpg) ;}
+.fondopers2{ background-image:  url(../images/cosas/ver-pers-dark.webp) ;}
+
 .encabezados {
 	background-position: center center;
 	background-size: cover;
