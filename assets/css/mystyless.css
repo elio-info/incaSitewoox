@@ -71,7 +71,7 @@
 		 padding-left: 60px;
 		 padding-right: 60px;
 		 padding-bottom: 10px;
-		 border-bottom: 1px solid #eee;
+		 border-bottom: 4px solid var(--color_fondo_bfp);
 	   }
 .cntx-scc-header{
 	text-align: center;
@@ -134,13 +134,37 @@
 	color: #0e7d27;
   }
 /** tarjetas de informacion fin**/
-
-.municipiosLugares ol li{
+.encabezadoListas h5,
+.encabezadoListas ul li {
 	color: #0e7d27;
-	list-style: disc inside;
-	padding: 0.25rem .25rem .1rem;
-	border-radius: 1.5rem;
-	border-bottom: 1px solid #eee;
+	list-style: inside;
+	padding: 0.5rem 2.5rem 1rem;
+	border-radius: 15rem;
+	border-bottom: 2px solid #eee;
+}
+.encabezadoListas ol li ul li{
+	color: #0e7d27;
+	list-style: inside;
+	padding: 0.5rem 2.5rem 1rem;
+	border-radius: 15rem;
+	border-bottom: 2px solid #eee;
+}
+.encabezadoListas ul li:hover{
+	background-color: #43434320;
+}
+
+
+.encabezadoListas ol li{
+	color: #0e7d27;	
+	list-style: outside;
+	list-style-type: decimal ;
+	padding: 0.5rem 2.5rem 1rem;
+	border-radius: 15rem;
+	border-bottom: 2px solid #eee;
+}
+
+.encabezadoListas ol li:hover{
+	background-color: #43434320;
 }
 
 .fondo footer {

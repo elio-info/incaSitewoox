@@ -1,5 +1,4 @@
 // para controlar cambio de tamaño de ventana
-let slides=["Efectividad","Rendimiento","Nutrici&oacute;n","Soberan&iacute;a"];
 function cambioWindowsAlert(params) {
     var pageSize = {
         width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
@@ -31,3 +30,20 @@ $(window).load(function() {
 .resize(function() {    
     cambioWindowsAlert();
 });
+
+function toogleView(quien){
+	let  piss=$("#"+quien)[0];//coger el elemt de consulta
+	piss.style.display = "none"== piss.style.display ? "block":"none";
+}
+
+function toogleViewSimbol(ordena,quien){
+	let ser=$("#"+ordena)[0];
+	ser.innerHTML=ser.innerHTML.includes(" - ")? " + ": " - ";
+	toogleView(quien);
+}
+
+function toogleViewSigned(ordena,quien){
+	let ser=$("#"+ordena)[0];
+	ser.innerHTML=ser.innerHTML.includes("menos")? " Ver m&aacute;s ": " Ver menos ";
+	toogleView(quien);
+}
