@@ -45,16 +45,31 @@ function toogleViewSigned(ordena,quien){
 	ser.innerHTML=ser.innerHTML.includes("menos")? " Ver m&aacute;s ": " Ver menos ";
 	toogleView(quien);
 }
+
+const navegaCV=["cvpag1","cvpag2","cvpag3"]; //navegacion los CV
+let posc_navegaCV=0;
 /**
- * Cambiar visibilidad de los div
- * @param {*} elemntsAOcultar pasar la etiqueta name con los nombres a buscar que ocultar 
- * @param {*} elemnts_AMostrar pasar la etiqueta name con los nombres a buscar que mostrar
+ * Cambiar visibilidad de los div *  
+ * @param {*} posc_elemnts_AMostrar posicion de la pag que mostrar
+ * @param {*} Lista_elemnts listado de nomencladores
  */
-function paginarDiv(elemntsAOcultar,elemnts_AMostrar) {
-    let serOc=document.getElementsByName(elemntsAOcultar),
-        serMos=document.getElementsByName(elemnts_AMostrar);
-    for (const divSelect of serOc) divSelect.style.display ="none";
-    for (const divSelect of serMos) divSelect.style.display ="block";
+function paginarDiv(posc_elemnts_AMostrar,Lista_elemnts) {
+    if(posc_elemnts_AMostrar<0 ) posc_elemnts_AMostrar=Lista_elemnts.length-1;
+    if( posc_elemnts_AMostrar>= Lista_elemnts.length) posc_elemnts_AMostrar=0;
+
+    for (let divSelect =0 ;divSelect<Lista_elemnts.length; divSelect++){
+        li_id_selected=$("#"+Lista_elemnts[divSelect])[0]; //selecionar la li
+        li_id_selected.className =li_id_selected.id==Lista_elemnts[posc_elemnts_AMostrar]? "active": "";   // si es la li selecionada, la activo
+        
+        let divsSelected=document.getElementsByName(navegaCV[divSelect]);  //coger todos las div de name ¿?          
+            for (const Selectdiv of divsSelected) 
+                 Selectdiv.style.display = Selectdiv.attributes["name"].value==Lista_elemnts[posc_elemnts_AMostrar]? "block" : "none";
+                 
+    }
+    posc_navegaCV =   posc_elemnts_AMostrar;
+    perr=$("#"+Lista_elemnts[posc_elemnts_AMostrar]);
+    
+    $("#"+Lista_elemnts[posc_elemnts_AMostrar])[0].focus();
 }
 
 //iui
