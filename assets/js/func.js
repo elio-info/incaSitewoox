@@ -67,9 +67,9 @@ function paginarDiv(posc_elemnts_AMostrar,Lista_elemnts) {
                  
     }
     posc_navegaCV =   posc_elemnts_AMostrar;
-    perr=$("#"+Lista_elemnts[posc_elemnts_AMostrar]);
-    
-    $("#"+Lista_elemnts[posc_elemnts_AMostrar])[0].focus();
+    //perr=$("#"+Lista_elemnts[posc_elemnts_AMostrar]);
+
+   // $("#"+Lista_elemnts[posc_elemnts_AMostrar])[0].focus();
 }
 
 //iui
