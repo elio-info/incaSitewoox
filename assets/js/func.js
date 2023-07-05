@@ -18,9 +18,7 @@ function cambioWindowsAlert(params) {
         };
     } else  {
         for(var _this of perras) _this.hidden=false;//oculto
-};
-      
-    
+};      
     
 };
 
@@ -47,3 +45,28 @@ function toogleViewSigned(ordena,quien){
 	ser.innerHTML=ser.innerHTML.includes("menos")? " Ver m&aacute;s ": " Ver menos ";
 	toogleView(quien);
 }
+/**
+ * Cambiar visibilidad de los div
+ * @param {*} elemntsAOcultar pasar la etiqueta name con los nombres a buscar que ocultar 
+ * @param {*} elemnts_AMostrar pasar la etiqueta name con los nombres a buscar que mostrar
+ */
+function paginarDiv(elemntsAOcultar,elemnts_AMostrar) {
+    let serOc=document.getElementsByName(elemntsAOcultar),
+        serMos=document.getElementsByName(elemnts_AMostrar);
+    for (const divSelect of serOc) divSelect.style.display ="none";
+    for (const divSelect of serMos) divSelect.style.display ="block";
+}
+
+//iui
+function bannerSwitcher() {
+    next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+    if (next.length) next.prop('checked', true);
+    else $('.sec-1-input').first().prop('checked', true);
+  }
+
+  var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+  $('nav .controls label').click(function() {
+    clearInterval(bannerTimer);
+    bannerTimer = setInterval(bannerSwitcher, 5000)
+  });
