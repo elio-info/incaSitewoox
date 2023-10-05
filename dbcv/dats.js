@@ -162,6 +162,6 @@ function FillPersons() {
   let nucleo=document.getElementsByName("cvpag");
   let plant=cvPag_Template(1,fillPerson(equip_INCA_proy[0]));
   //let perrrr=;
-  nucleo.appendChild(plant);
+  nucleo[0].appendChild(plant);
   
 }
