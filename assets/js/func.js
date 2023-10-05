@@ -19,6 +19,10 @@ function cambioWindowsAlert(params) {
         } else  {
             for(var _this of perras) _this.hidden=false;//oculto
         };      
+
+    } else  {
+        for(var _this of perras) _this.hidden=false;//oculto
+};      
     
 };
 
