@@ -113,7 +113,7 @@ function fillPerson(personData) {
  * @param {cvCard_persn} cvCard_persn cv creado desde la persona
  * @returns CardTempleta
  */
-function cvPag_Template(indx,cvCard_persn) {
+function cvPag_Template(indx,cvCard_persn,div_place) {
   //imagen link
   let cvCard_teml_item_row_col6_imgen=document.createElement("img");
       cvCard_teml_item_row_col6_imgen.src="assets/images/cosas/pdf-file.svg";
@@ -139,7 +139,7 @@ function cvPag_Template(indx,cvCard_persn) {
    
   let cvCard_teml=document.createElement("div");
   //tarjeta completa lantilla
-    cvCard_teml.id="cvTmpl"+indx;//distribucion ajustable
+    cvCard_teml.id=div_place+indx;//distribucion ajustable
     cvCard_teml.className="col-lg-6 col-lg-6 col-sm-6";//distribucion ajustable
     cvCard_teml.appendChild(cvCard_teml_item);// agrego elemento class Item
 
@@ -154,12 +154,12 @@ function cvPag_Template(indx,cvCard_persn) {
 function FillPersons() {
   //alert("asdhvaskdvas");
     let plant=null
-  let nucleo=document.getElementsByName("cvpag");
+  let nucleo=document.getElementsByName("cvlist");
   let posIndex=0;
   for (let index = 0; index < equip_INCA_proy.length; index++) {
     if (index % 4 === 0) posIndex++;
     //aggregar elemnt
-    plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]));  
+    plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]),"cvpag");  
   nucleo[0].appendChild(plant);
   
   }

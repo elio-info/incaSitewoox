@@ -63,7 +63,9 @@ function paginarDiv(posc_elemnts_AMostrar,Lista_elemnts) {
 
     for (let divSelect =0 ;divSelect<Lista_elemnts.length; divSelect++){
         li_id_selected=$("#"+Lista_elemnts[divSelect])[0]; //selecionar la li
-        li_id_selected.className =li_id_selected.id==Lista_elemnts[posc_elemnts_AMostrar]? "active": "";   // si es la li selecionada, la activo
+        li_id_selected.className =
+            (li_id_selected.id==Lista_elemnts[posc_elemnts_AMostrar])
+                ? "active": "";   // si es la li selecionada, la activo
         
         let divsSelected=document.getElementsByName(navegaCV[divSelect]);  //coger todos las div de name ¿?          
             for (const Selectdiv of divsSelected) 
