@@ -6,23 +6,23 @@ function cambioWindowsAlert(params) {
       };
       let perras= document.getElementsByClassName('text');
       if (pageSize.width<850) {
+        //size 
         let perr="w:"+$(this).width()+" h:"+$(this).height();
         //alert(perr);
         console.log("Ancho de la página: " + pageSize.width);
         console.log("Alto de la página: " + pageSize.height);
         //coger los slides text #section-1 .content-slider nav .controls label span.text
         const textSlides = $('#section-1 .content-slider nav .controls label span.text');        
-        if (perras.length) {
-            for(var _this of perras) _this.hidden=true;//oculto
-            
-        };
+        if (perras.length >0) {
+            for(var _this of perras) _this.hidden=true;//oculto            
+            };
         } else  {
-            for(var _this of perras) _this.hidden=false;//oculto
+            for(var _this of perras) _this.hidden=false;//muestro
         };      
 
-    } else  {
+    /*} else  {
         for(var _this of perras) _this.hidden=false;//oculto
-};      
+};      */
     
 };
 
