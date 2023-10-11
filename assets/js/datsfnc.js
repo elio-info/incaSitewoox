@@ -155,13 +155,14 @@ function FillPersons() {
   //alert("asdhvaskdvas");
     let plant=null
   let nucleo=document.getElementsByName("cvpag");
-  let posIndex=1;
+  let posIndex=0;
   for (let index = 0; index < equip_INCA_proy.length; index++) {
-    if (index+1 % 4) posIndex++;
+    if (index % 4 === 0) posIndex++;
     //aggregar elemnt
     plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]));  
+  nucleo[0].appendChild(plant);
+  
   }
   
-  nucleo[0].appendChild(plant);
   
 }

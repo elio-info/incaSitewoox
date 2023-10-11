@@ -196,5 +196,6 @@
 
 .thumb-res{
 	width: 420px;
-	
+	height: 420px;
+	overflow: hidden;
 }
