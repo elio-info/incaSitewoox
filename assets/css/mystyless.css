@@ -186,12 +186,6 @@
 
 /* resulta2 */
 .fondopers3{ 	
-	background-image:  url(../images/cosas/habichuela_comic.webp) ;
-    margin-top: 70px;	
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 130px 0px 200px 0px;
+	background-image:  url(../images/cosas/habichuela_comic.webp) ;   
 	
 }
