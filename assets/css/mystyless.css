@@ -189,3 +189,13 @@
 	background-image:  url(../images/cosas/habichuela_comic.webp) ;   
 	
 }
+.fondo_blur {
+	background-size: cover;
+	backdrop-filter: blur(10px);
+	padding: 20px;
+  }
+.fondo_invert {
+	background-size: cover;
+	backdrop-filter: invert(40%);
+	padding: 20px;
+  }
