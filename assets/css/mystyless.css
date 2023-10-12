@@ -192,10 +192,5 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 130px 0px 200px 0px;}
-
-.thumb-res{
-	width: 420px;
-	height: 420px;
-	overflow: hidden;
+    padding: 130px 0px 200px 0px;	
 }
