@@ -140,7 +140,7 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
   let cvCard_teml=document.createElement("div");
   //tarjeta completa lantilla
     cvCard_teml.id=div_place+indx;//distribucion ajustable
-    cvCard_teml.className="col-lg-6 col-lg-6 col-sm-6";//distribucion ajustable
+    cvCard_teml.className=" col-lg-6 col-sm-6";//distribucion ajustable
     cvCard_teml.appendChild(cvCard_teml_item);// agrego elemento class Item
 
    
@@ -154,7 +154,7 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
 function FillPersons() {
   //alert("asdhvaskdvas");
     let plant=null
-  let nucleo=document.getElementsByName("cvlist");
+  let nucleo=document.getElementsByName("cvpag");
   let posIndex=0;
   for (let index = 0; index < equip_INCA_proy.length; index++) {
     if (index % 4 === 0) posIndex++;

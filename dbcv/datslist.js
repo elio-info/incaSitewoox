@@ -12,7 +12,7 @@ let equip_INCA_proy= [
     ,
     { 
         cargo:" Investigador ",
-        name:" Alexei Yoan Mart�nez Robaina ",
+        name:" Alexei Yoan Mart&iacute;nez Robaina ",
         titulo:"Dr.C. Agroecol&oacute;gicas.  Ingeniero Agr&oacute;nomo",
         pict_cargo:"user",
         lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'" ,
@@ -56,10 +56,10 @@ let equip_INCA_proy= [
     ,
     { 
         cargo:" Investigador ",
-        name:" Yaumara Mu�oz hern&aacute;ndez ",
+        name:" Yaumara Mu&nacute;oz hern&aacute;ndez ",
         titulo:"M.Sc. Tecnolog&iacute;as en la educaci&oacute;n.  licenciado en Educaci&oacute;n",
         pict_cargo:"user",
-        lugar:"Universidad de Pinar del R�o (UPR) 'Hermanos Sa�z Montes de Oca'",
+        lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
         pict_tipo_personal:"tree",
         dato :"Personal del Proyecto",
         cv:"Yaumara"
@@ -78,10 +78,10 @@ let equip_INCA_proy= [
     ,
     { 
         cargo:" Investigador ",
-        name:" Yoerlandy Santana Ba�os ",
+        name:" Yoerlandy Santana Ba&inacute;os ",
         titulo:"M.Sc. Agroecol&oacute;gicas.  Ingeniero Agr&oacute;nomo",
         pict_cargo:"user",
-        lugar:"Universidad de Pinar del R�o (UPR) 'Hermanos Sa�z Montes de Oca'",
+        lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
         pict_tipo_personal:"tree",
         dato :"Personal del Proyecto",
         cv:"Santana"
