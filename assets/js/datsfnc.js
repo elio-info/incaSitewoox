@@ -113,7 +113,7 @@ function fillPerson(personData) {
  * @param {cvCard_persn} cvCard_persn cv creado desde la persona
  * @returns CardTempleta
  */
-function cvPag_Template(indx,cvCard_persn,div_place) {
+function cvPag_Template(indx,cvCard_persn) {
   //imagen link
   let cvCard_teml_item_row_col6_imgen=document.createElement("img");
       cvCard_teml_item_row_col6_imgen.src="assets/images/cosas/pdf-file.svg";
@@ -123,12 +123,11 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
       cvCard_teml_item_row_col6_img.appendChild(cvCard_teml_item_row_col6_imgen);
   //col 6
   let cvCard_teml_item_row_col6=document.createElement("div");
-      cvCard_teml_item_row_col6.className="col-lg-5";
+      cvCard_teml_item_row_col6.className="col-lg-6";
       cvCard_teml_item_row_col6.appendChild(cvCard_teml_item_row_col6_img);  
   //row
   let cvCard_teml_item_row=document.createElement("div");
       cvCard_teml_item_row.className="row";
-      cvCard_teml_item_row.id="perrow"+indx;
       cvCard_teml_item_row.appendChild(cvCard_teml_item_row_col6);
       cvCard_teml_item_row.appendChild(cvCard_persn)
   //item
@@ -139,13 +138,14 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
    
   let cvCard_teml=document.createElement("div");
   //tarjeta completa lantilla
-    cvCard_teml.id=div_place+indx;//distribucion ajustable
-    cvCard_teml.className=" col-lg-5 col-sm-5";//distribucion ajustable
+    cvCard_teml.className=" col-lg-6 col-sm-6";//distribucion ajustable
     cvCard_teml.appendChild(cvCard_teml_item);// agrego elemento class Item
 
    
   return cvCard_teml;
 }
+
+const lugar_listPers="div_place"
 
 /**
  * 
@@ -154,16 +154,17 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
 function FillPersons() {
   //alert("asdhvaskdvas");
     let plant=null ,
-        divContenedor=null,
-        lugar="div_place"
+        divContenedor=null
+        
   let nucleo=document.getElementsByName("cvpag");//donde ponerlos
   let posIndex=0;//posicion en cant de paneles de 4
   for (let index = 0; index < equip_INCA_proy.length; index++) {//moverme por la cant de elemts
     if (index % 4 === 0){//separar por 4
           posIndex++;//llevo pos
-          divContenedor=document.createElement("row");//creo divContenedor
+          divContenedor=document.createElement("div");//creo divContenedor
           //para llenar con las personas
-            divContenedor.id= lugar + posIndex;//div para futuros 4
+            divContenedor.id= lugar_listPers + posIndex;//div para futuros 4
+            divContenedor.className= "row"
             divContenedor.style.display= //ver o no
                                   posIndex > 1 ? //es el 1ro
                                           " none "//lo oculto
@@ -172,17 +173,10 @@ function FillPersons() {
     } 
     //aggregar elemnt aTemplate
     plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]),"cvpag");
-    //agrego a divContenedor
-    pee=$('#'+lugar+posIndex)[0]
-    $('#'+lugar+posIndex)[0].appendChild(plant.cloneNode(true)) 
-    //nucleo[0].appendChild(plant);
-    //aggregar elemnt completo
-    //plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]),"cvpag");  
-    //nucleo[0].appendChild(plant);
-    if (index % 4 === 0 ) {
-    //  nucleo[0].appendChild(divContenedor[posIndex]);//agrego el divContenedor
-    }
-  }
-  window.location.href="#cvpag"
+    //agrego a divContenedor pee=$('#'+lugar+posIndex)[0]
+    
+    $('#'+lugar_listPers+posIndex)[0].appendChild(plant.cloneNode(true)) 
+    
+  } 
   
 }

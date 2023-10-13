@@ -49,7 +49,7 @@ let equip_INCA_proy= [
         titulo:"M.Sc. Tecnolog&iacute;s inform&aacute;cas.  Ingeniero Inform&aacute;tico",
         pict_cargo:"user",
         lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
-        pict_tipo_personal:"tree",
+        pict_tipo_personal:"pc",
         dato :"Inform&aacute;tico del Proyecto",
         cv:"Eliomar"
     }

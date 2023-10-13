@@ -50,33 +50,32 @@ function toogleViewSigned(ordena,quien){
 	toogleView(quien);
 }
 
-const navegaCV=["cvpag1","cvpag2","cvpag3"]; //navegacion los CV
-let posc_navegaCV=0;
+const navegaCV=Math.trunc(equip_INCA_proy.length/4 ) + 1 //navegacion los CV ["cvpag1","cvpag2","cvpag3"];
+let posc_navegaCV=1;
 /**
  * Cambiar visibilidad de los div *  
  * @param {*} posc_elemnts_AMostrar posicion de la pag que mostrar
- * @param {*} Lista_elemnts listado de nomencladores
+ * @param {*} cantidad_elemnts cantidad de elem agrupados en 4
  */
-function paginarDiv(posc_elemnts_AMostrar,Lista_elemnts) {
-    if(posc_elemnts_AMostrar<0 ) posc_elemnts_AMostrar=Lista_elemnts.length-1;
-    if( posc_elemnts_AMostrar>= Lista_elemnts.length) posc_elemnts_AMostrar=0;
+function paginarDiv(posc_elemnts_AMostrar,cantidad_elemnts) {
+    if(posc_elemnts_AMostrar < 1 ) posc_elemnts_AMostrar=cantidad_elemnts;
+    if( posc_elemnts_AMostrar> cantidad_elemnts) posc_elemnts_AMostrar = 1;
 
-    for (let divSelect =0 ;divSelect<Lista_elemnts.length; divSelect++){
-        li_id_selected=$("#"+Lista_elemnts[divSelect])[0]; //selecionar la li
+    for (let divSelect =1 ;divSelect<cantidad_elemnts+1; divSelect++){
+        li_id_selected=$("#cvpag"+divSelect)[0]; //selecionar la li
         li_id_selected.className =
-            (li_id_selected.id==Lista_elemnts[posc_elemnts_AMostrar])
+            (li_id_selected.id=="cvpag"+posc_elemnts_AMostrar)
                 ? "active": "";   // si es la li selecionada, la activo
         
-        let divsSelected=document.getElementsByName(navegaCV[divSelect]);  //coger todos las div de name ¿?          
-            for (const Selectdiv of divsSelected) 
-                 Selectdiv.style.display = Selectdiv.attributes["name"].value==Lista_elemnts[posc_elemnts_AMostrar]? "block" : "none";
+        let divsSelected=$("#"+lugar_listPers+ divSelect)[0];  //coger div row         
+            divsSelected.style = 
+                posc_elemnts_AMostrar == divSelect ?
+                    " " :
+                    "display : none";
                  
     }
     posc_navegaCV =   posc_elemnts_AMostrar;
-    window.location.href="#cvpag"
-    //perr=$("#"+Lista_elemnts[posc_elemnts_AMostrar]);
-
-   // $("#"+Lista_elemnts[posc_elemnts_AMostrar])[0].focus();
+    window.location.href="#topCabeza"   
 }
 
 //iui
