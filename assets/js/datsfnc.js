@@ -153,16 +153,36 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
  */
 function FillPersons() {
   //alert("asdhvaskdvas");
-    let plant=null
-  let nucleo=document.getElementsByName("cvpag");
-  let posIndex=0;
-  for (let index = 0; index < equip_INCA_proy.length; index++) {
-    if (index % 4 === 0) posIndex++;
-    //aggregar elemnt
-    plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]),"cvpag");  
-  nucleo[0].appendChild(plant);
-  
+    let plant=null ,
+        divContenedor=null,
+        lugar="div_place"
+  let nucleo=document.getElementsByName("cvpag");//donde ponerlos
+  let posIndex=0;//posicion en cant de paneles de 4
+  for (let index = 0; index < equip_INCA_proy.length; index++) {//moverme por la cant de elemts
+    if (index % 4 === 0){//separar por 4
+          posIndex++;//llevo pos
+          divContenedor=document.createElement("div");//creo divContenedor
+          //para llenar con las personas
+            divContenedor.id= lugar + posIndex;//div para futuros 4
+            divContenedor.style.display= //ver o no
+                                  posIndex > 1 ? //es el 1ro
+                                          " block "//lo oculto
+                                          :" " //lo muestro
+            nucleo[0].appendChild(divContenedor);//agrego el divContenedor
+    } 
+    //aggregar elemnt aTemplate
+    plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]),"cvpag");
+    //agrego a divContenedor
+    pee=$('#'+lugar+posIndex)[0]
+    $('#'+lugar+posIndex)[0].appendChild(plant.cloneNode(true)) 
+    //nucleo[0].appendChild(plant);
+    //aggregar elemnt completo
+    //plant=cvPag_Template(posIndex,fillPerson(equip_INCA_proy[index]),"cvpag");  
+    //nucleo[0].appendChild(plant);
+    if (index % 4 === 0 ) {
+    //  nucleo[0].appendChild(divContenedor[posIndex]);//agrego el divContenedor
+    }
   }
-  
+  window.location.href="#cvpag"
   
 }

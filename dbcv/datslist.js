@@ -56,7 +56,7 @@ let equip_INCA_proy= [
     ,
     { 
         cargo:" Investigador ",
-        name:" Yaumara Mu&nacute;oz hern&aacute;ndez ",
+        name:" Yaumara Muñoz Hern&aacute;ndez ",
         titulo:"M.Sc. Tecnolog&iacute;as en la educaci&oacute;n.  licenciado en Educaci&oacute;n",
         pict_cargo:"user",
         lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
@@ -78,7 +78,7 @@ let equip_INCA_proy= [
     ,
     { 
         cargo:" Investigador ",
-        name:" Yoerlandy Santana Ba&inacute;os ",
+        name:" Yoerlandy Santana Baños ",
         titulo:"M.Sc. Agroecol&oacute;gicas.  Ingeniero Agr&oacute;nomo",
         pict_cargo:"user",
         lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
@@ -89,7 +89,7 @@ let equip_INCA_proy= [
     ,
     { 
         cargo:" Investigador ",
-        name:" yanara Regla Huele Arriete ",
+        name:" Yanara Regla Huele Arriete ",
         titulo:" Ingeniero Agr&oacute;nomo",
         pict_cargo:"user",
         lugar:"Instituto Nacional de Suelos de Cuba ",

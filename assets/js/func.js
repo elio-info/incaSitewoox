@@ -73,6 +73,7 @@ function paginarDiv(posc_elemnts_AMostrar,Lista_elemnts) {
                  
     }
     posc_navegaCV =   posc_elemnts_AMostrar;
+    window.location.href="#cvpag"
     //perr=$("#"+Lista_elemnts[posc_elemnts_AMostrar]);
 
    // $("#"+Lista_elemnts[posc_elemnts_AMostrar])[0].focus();
