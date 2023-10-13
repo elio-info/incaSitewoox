@@ -123,7 +123,7 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
       cvCard_teml_item_row_col6_img.appendChild(cvCard_teml_item_row_col6_imgen);
   //col 6
   let cvCard_teml_item_row_col6=document.createElement("div");
-      cvCard_teml_item_row_col6.className="col-lg-6";
+      cvCard_teml_item_row_col6.className="col-lg-5";
       cvCard_teml_item_row_col6.appendChild(cvCard_teml_item_row_col6_img);  
   //row
   let cvCard_teml_item_row=document.createElement("div");
@@ -140,7 +140,7 @@ function cvPag_Template(indx,cvCard_persn,div_place) {
   let cvCard_teml=document.createElement("div");
   //tarjeta completa lantilla
     cvCard_teml.id=div_place+indx;//distribucion ajustable
-    cvCard_teml.className=" col-lg-6 col-sm-6";//distribucion ajustable
+    cvCard_teml.className=" col-lg-5 col-sm-5";//distribucion ajustable
     cvCard_teml.appendChild(cvCard_teml_item);// agrego elemento class Item
 
    
@@ -161,12 +161,12 @@ function FillPersons() {
   for (let index = 0; index < equip_INCA_proy.length; index++) {//moverme por la cant de elemts
     if (index % 4 === 0){//separar por 4
           posIndex++;//llevo pos
-          divContenedor=document.createElement("div");//creo divContenedor
+          divContenedor=document.createElement("row");//creo divContenedor
           //para llenar con las personas
             divContenedor.id= lugar + posIndex;//div para futuros 4
             divContenedor.style.display= //ver o no
                                   posIndex > 1 ? //es el 1ro
-                                          " block "//lo oculto
+                                          " none "//lo oculto
                                           :" " //lo muestro
             nucleo[0].appendChild(divContenedor);//agrego el divContenedor
     } 
