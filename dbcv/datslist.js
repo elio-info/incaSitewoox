@@ -49,7 +49,7 @@ let equip_INCA_proy= [
         titulo:"M.Sc. Tecnolog&iacute;s inform&aacute;cas.  Ingeniero Inform&aacute;tico",
         pict_cargo:"user",
         lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
-        pict_tipo_personal:"pc",
+        pict_tipo_personal:"desktop",
         dato :"Inform&aacute;tico del Proyecto",
         cv:"Eliomar"
     }
@@ -60,7 +60,7 @@ let equip_INCA_proy= [
         titulo:"M.Sc. Tecnolog&iacute;as en la educaci&oacute;n.  licenciado en Educaci&oacute;n",
         pict_cargo:"user",
         lugar:"Universidad de Pinar del R&iacute;o (UPR) 'Hermanos Sa&iacute;z Montes de Oca'",
-        pict_tipo_personal:"tree",
+        pict_tipo_personal:"chalkboard-teacher",
         dato :"Personal del Proyecto",
         cv:"Yaumara"
     }
@@ -71,7 +71,7 @@ let equip_INCA_proy= [
         titulo:"Dr.C. Agr&iacute;colas.  Licenciado Qu&iacute;mica",
         pict_cargo:"user",
         lugar:"Instituto Nacional de Ciencias Agr&iacute;colas (INCA) ",
-        pict_tipo_personal:"tree",
+        pict_tipo_personal:"atom",
         dato :"Personal del Proyecto",
         cv:"Ramon"
     }
