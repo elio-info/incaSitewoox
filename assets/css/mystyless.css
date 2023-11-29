@@ -200,9 +200,16 @@
 	padding: 20px;
   }
 
+  .row-mio{
+	display: flex;
+	justify-content: center;
+	margin-top: 45px;
+  }
+
   .content-img-grid  {
 	display: flex;
   	justify-content: center;
+	width: 80%;
 	background-color: #fff;
 	border-radius: 25px;
 	padding: 45px;
