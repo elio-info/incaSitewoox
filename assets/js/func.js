@@ -107,8 +107,8 @@ function bannerSwitcher() {
             imgen_link=document.createElement("img"),
             element_vinc =document.createElement("a");
         
-        imgen_link.setAttribute('width','50px') ;
-        imgen_link.setAttribute('height',"50px");
+        imgen_link.setAttribute('width','100px') ;
+        imgen_link.setAttribute('height',"200px");
         imgen_link.className=img_clss;
         imgen_link.src=img_src;
 
@@ -128,32 +128,11 @@ function bannerSwitcher() {
     $('#popUp')[0].className=  "modal"
     $('#img01')[0].src=img
     $('#popUp')[0].showModal();
-   }else
-    $('#popUp')[0].className= "modal-unshow"
+   }else{
+    $('#popUp')[0].className=  "modal-unshow"
+    $('#popUp')[0].close();
+}
     
-    /*
-    $('#popUp')[0]. open(
-        {
-            showCloseBtn:true,
-            closeOnBgClick:true,
-            enableEscapeKey: true,
-            closeOnContentClick: true,
-            closeBtnInside: true,
-            type:'image',
-            image: {
-                markup: '<div class="mfp-figure">'+
-                        '<div class="mfp-close"></div>'+
-                        '<div class="mfp-img"></div>'+
-                        '</div>',
-                tError: 'La imagen no puede cargarse.'
-            },
-            items: {
-                src: 'images2.jpg'
-            }
-            
-        }
-    );
-    */
 
     }
   

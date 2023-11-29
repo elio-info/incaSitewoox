@@ -210,7 +210,8 @@
   }
 
   /*  sobre mi modal*/
-  .modal-unshow{ display: none;}
+  .modales::backdrop { background-color: rgba(0,0,0,.3);}
+  -modal-unshow {display:none }
   .modal {
     display: block;
     position: fixed; 
@@ -245,12 +246,12 @@
 
 .modal-content, #caption { 
     animation-name: zoom;
-    animation-duration: 0.6s;
+    animation-duration: 0.36s;
 }
 
 @keyframes zoom {
     from {transform:scale(0)} 
-    to {transform:scale(1)}
+    to {transform:scale(0.51)}
 }
 
 .close {
