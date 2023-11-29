@@ -50,7 +50,7 @@ function toogleViewSigned(ordena,quien){
 	toogleView(quien);
 }
 
-const navegaCV=Math.trunc(equip_INCA_proy.length/4 ) + 1 //navegacion los CV ["cvpag1","cvpag2","cvpag3"];
+const navegaCV= typeof equip_INCA_proy ?? Math.trunc(equip_INCA_proy.length/4 ) + 1 //navegacion los CV ["cvpag1","cvpag2","cvpag3"];
 let posc_navegaCV=1;
 /**
  * Cambiar visibilidad de los div *  
@@ -91,3 +91,69 @@ function bannerSwitcher() {
     clearInterval(bannerTimer);
     bannerTimer = setInterval(bannerSwitcher, 5000)
   });
+
+  /**
+   * 
+   * @param {string} lugar_list donde se pondra
+   * @param {string} ruta_base donde esta la img
+   * @param {int} cant_vinc cantidad de vinculos
+   * @param {string} img_clss clase de la imagen
+   */
+  function FillLinksImage(lugar_list,ruta_base,cant_vinc=1,img_clss,nombre_buscar) {
+    for (let index_vinc = 1; index_vinc <= cant_vinc; index_vinc++) {
+        
+        //imagen link
+        let img_src=ruta_base +( index_vinc<10 ? "0":"" ) + index_vinc+".jpg",
+            imgen_link=document.createElement("img"),
+            element_vinc =document.createElement("a");
+        
+        imgen_link.setAttribute('width','50px') ;
+        imgen_link.setAttribute('height',"50px");
+        imgen_link.className=img_clss;
+        imgen_link.src=img_src;
+
+        
+        element_vinc.href= "#";
+        element_vinc.setAttribute('onclick', "VerteSola(1,'"+img_src+"');")
+        element_vinc.setAttribute('data-lightbox', nombre_buscar);
+        element_vinc.appendChild(imgen_link)
+       
+        $('#'+lugar_list)[0].appendChild(element_vinc.cloneNode(true)) 
+    }
+    
+  }
+
+  function VerteSola(params=1,img='') {
+   if (params) {
+    $('#popUp')[0].className=  "modal"
+    $('#img01')[0].src=img
+    $('#popUp')[0].showModal();
+   }else
+    $('#popUp')[0].className= "modal-unshow"
+    
+    /*
+    $('#popUp')[0]. open(
+        {
+            showCloseBtn:true,
+            closeOnBgClick:true,
+            enableEscapeKey: true,
+            closeOnContentClick: true,
+            closeBtnInside: true,
+            type:'image',
+            image: {
+                markup: '<div class="mfp-figure">'+
+                        '<div class="mfp-close"></div>'+
+                        '<div class="mfp-img"></div>'+
+                        '</div>',
+                tError: 'La imagen no puede cargarse.'
+            },
+            items: {
+                src: 'images2.jpg'
+            }
+            
+        }
+    );
+    */
+
+    }
+  

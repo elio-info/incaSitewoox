@@ -31,7 +31,7 @@ https://templatemo.com/tm-580-woox-travel
   <!-- TemplateEndEditable -->
   </head>
 
-<body>
+<body onload="FillLinksImage('ImgList','assets/images/fotos-reslt/result-',14,'col-md-3','dePerras');">
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -105,7 +105,9 @@ https://templatemo.com/tm-580-woox-travel
 
   <!-- Cuerpo Inicio -->
   <!-- carrusel de resultados-->
-  <!-- carrusel de fotos resultados-->
+<section>
+  <div class="row">
+ <!-- carrusel de fotos resultados-->
   <div class="cities-town">
     <div class="container">
       <div class="row">
@@ -152,10 +154,26 @@ https://templatemo.com/tm-580-woox-travel
         </div>
       </div>
     </div>
+    
   </div>
   <!-- carrusel reslt fin-->
-
-  <!-- publicaciones -->
+  </div>
+  <div class="row">
+    <!-- Muestra de fotos de resultados -->
+  <div class="content-img-grid">
+    <div class="content">
+      <div id="ImgList" class="tabSpecialcontent ">
+        <a href="#" onclick="VerteSola(1);">sdubvs</a>
+          <h3>EcoMic® y otros productos , varios cultivo </h3>                    
+              
+      </div>
+      
+    </div>    
+  </div>
+  <!-- Fin Muestra de fotos de resultados -->
+  </div>
+  <div class="row">
+    <!-- publicaciones -->
 
   <div class="weekly-offers">
     <div class="container">
@@ -260,7 +278,20 @@ https://templatemo.com/tm-580-woox-travel
       </div>
     </div>
   </div>
+
+
   <!-- publicaciones fin-->
+  </div>
+</section>
+ 
+<dialog id="popUp" class="modal-unshow" >
+  <span class="close" onclick="VerteSola(0);">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption">Resulta de nuestro trabajo</div>
+</dialog>
+  
+
+  
   <!-- Cuerpo Fin -->
   <!-- EndEditable -->
 
