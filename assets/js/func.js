@@ -125,23 +125,26 @@ function bannerSwitcher() {
 
   function VerteSola(params=1,img='') {
    if (params) {
-    var popUp=$('#popUp')[0],
-        my_img=$('#img01')[0];
-    $('#popUp')[0].className=  "modal";
-    
-    var screenWidth = popUp.clientWidth;
-    var screenHeight = popUp.clientHeight;
-    my_img.width=screenWidth;
-    my_img.height=screenHeight;
-    my_img.src=img;
+    var popUp=$('#popUp')[0];
+    var my_img=$('#img01')[0];
 
+    popUp.className="modal";
     
-    $('#popUp')[0].showModal();
+    var screenWidth = window.visualViewport.width * .8 ;
+    popUp.clientWidth=screenWidth ;
+    
+    var screenHeight =window.visualViewport.height * .8 ; 
+    popUp.clientHeight=screenHeight ;
 
-    var lapee=""
+    my_img.width=screenWidth * .9;
+    my_img.height=screenHeight * .9;
+    my_img.src=img;   
+   
+ popUp.showModal();
    }else{
-    $('#popUp')[0].className=  "modal-unshow"
+    $('#popUp')[0].className=  "modal-unshow";
     $('#popUp')[0].close();
+    $('#tabSpecialcontent')[0].scrollIntoView({ behavior: 'smooth' });
 }
     
 
