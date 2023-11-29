@@ -210,8 +210,8 @@
   }
 
   /*  sobre mi modal*/
-  .modales::backdrop { background-color: rgba(0,0,0,.3);}
-  -modal-unshow {display:none }
+  
+  .modal-unshow {display:none }
   .modal {
     display: block;
     position: fixed; 
