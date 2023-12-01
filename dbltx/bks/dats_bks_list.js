@@ -1,9 +1,8 @@
-let books_INCA_proy= [
+let books_INCA_proy = [
     { 
-        autor:"Pedro",
-        name:" Michel Ruiz S&aacute;nchez",
-        titulo:"Dr.C. Agr&oacute;nomas Ingeniero Agr&oacute;nomo",
+        autor:"Pedro Soto",
+        rutDoc:"Agric Sostenible en Cuba.pdf",
+        titulo:"Agric Sostenible en Cuba.",
         year:"2022"
-    }
-    
+    }    
 ]
