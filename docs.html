@@ -55,10 +55,11 @@ https://templatemo.com/tm-580-woox-travel
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html" title="info general">Inicio</a></li><!--index.html -->
-              <li><a href="proy.html"  title="Fundamentos del Proyecto">Proyecto</a></li><!--proy.html -->
+              <li><a href="proy.html" title="Fundamentos del Proyecto">Proyecto</a></li><!--proy.html -->
               <li><a href="ppls.html" title="Entidades ejecutoras y participantes">Integrantes</a></li><!--ppls.html -->
               <li><a href="reslt.html" title="Resultados obtenidos del proyecto">Resultados</a></li><!-- reslt.html-->
-              <li><a href="docs.html" class="active"title="Materiales de consultas">Materiales de consulta</a></li><!--docs.html -->
+              <li><a href="docs.html" class="active" title="Materiales de consultas">Materiales de consulta</a></li>
+              <!--docs.html -->
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -99,9 +100,10 @@ https://templatemo.com/tm-580-woox-travel
     <!-- datos libros -->
     <div class="cntx-scc col-lg-10">
       <div class="cntx-scc-topic">
-        <h3>Libros creados por el Proyecto
-          <button id="verBks" class="btn btn-success" onClick="toogleViewSigned('verBks', 'bks');" > Ver m&aacute;s
-          </button></h3>
+        <h3><img class="ico-img" src="assets/images/icos/book-128.ico">&nbsp; &nbsp; Libros creados por el Proyecto
+          <button id="verBks" class="btn btn-success" onClick="toogleViewSigned('verBks', 'bks');"> Ver m&aacute;s
+          </button>
+        </h3>
       </div>
       <div class="cntx-scc-topic" id="bks" style="display: none;">
         <!-- para llenar -->
@@ -111,8 +113,8 @@ https://templatemo.com/tm-580-woox-travel
     <!-- manuales libros -->
     <div class="cntx-scc col-lg-10">
       <div class="cntx-scc-topic">
-        <h3>Manuales sobre el Proyecto
-          <button id="verMnls" class="btn btn-success" onClick="toogleViewSigned('verMnls', 'mnl');" > Ver m&aacute;s
+        <h3><img class="ico-img" src="assets/images/icos/magazine-128.ico">&nbsp; &nbsp; Manuales sobre el Proyecto
+          <button id="verMnls" class="btn btn-success" onClick="toogleViewSigned('verMnls', 'mnl');"> Ver m&aacute;s
           </button>
         </h3>
       </div>
@@ -123,29 +125,14 @@ https://templatemo.com/tm-580-woox-travel
     <!-- fin manuales libros -->
     <!-- articulos libros -->
     <div class="cntx-scc col-lg-10">
-      <div class="cntx-scc-topic">
-        <h3>Art&iacute;culos del Proyecto
-          <button id="verArtc" class="btn btn-success" onClick="toogleViewSigned('verArtc', 'artcl');" > Ver m&aacute;s
-          </button>
-        </h3>        
+      <div class="cntx-scc-topic"> 
+        <h3><img class="ico-img" src="assets/images/icos/paper-128.ico">&nbsp; &nbsp; Art&iacute;culos del Proyecto
+          <button id="verArtc" class="btn btn-success" onClick="toogleViewSigned('verArtc', 'artcl');"> Ver m&aacute;s
+           </button>
+        </h3>
       </div>
-      <div class="cntx-scc-topic" id="artcl" style="display: block;">
-          <div >
-          // imagen-tipo-literatura {enlace-doc > imagen-tipo-doc-extension año-doc titulo-doc}
-    //                           [autor-doc > imagen-tipo-autor nombre-autor]
-    
-           
-            
-            <p>imagen-tipo-literatura <img class="ico-img" src="assets/images/icos/book-64.ico" >
-            
-            <a href="dbltx/bks/Agric Sostenible en Cuba.pdf"> <img class="ico-img" src="assets/images/icos/book-64.ico" > 
-               <b>Duraci&oacute;n:</b> <span>  Agric Sostenible en Cuba.pdf </span></a>
-             <br>
-             <img class="ico-img" src="assets/images/icos/book-64.ico" >
-              persona
-            </p>
-          </div>
-        </div>
+      <div class="cntx-scc-topic" id="artcl" style="display: none;">
+      </div>
     </div>
     <!-- fin articulos libros -->
     <!-- // Fin Div Datos Importantes -->
@@ -199,8 +186,9 @@ https://templatemo.com/tm-580-woox-travel
   <!-- mios -->
   <!-- mios -->
   <script src="dbltx/bks/dats_bks_list.js">     </script>
+  <script src="dbltx/mnks/dats_mnls_list.js">     </script>
+  <script src="dbltx/artcl/dats_artcl_list.js">     </script>
   <script src="assets/js/func.js">     </script>
-
   <script src="assets/js/dats_lit_fnc.js">     </script>
 
 </body>

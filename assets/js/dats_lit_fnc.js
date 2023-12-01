@@ -53,20 +53,21 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
 
   literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
 
-let autor=document.createElement('span')
-  autor.innerHTML='&nbsp; &nbsp;'+literatureData.autor
-  doc_pdfLink.appendChild(autor);//agrego dentro de la tarjeta completa, agrego el spacio
-
-
-  literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
 
   //dentro de la tarjeta completa, el icono
   let autor_tipo_ico = document.createElement("img");
   autor_tipo_ico.src = iconDatAutor.lugar;//poner icono cargo valor
   autor_tipo_ico.className = iconDatAutor.clase;//poner icono clase valor
+  
+  let autor=document.createElement('span')
+  autor.innerHTML='&nbsp; &nbsp; <i><u>'+literatureData.autor +'</u></i>' 
+  doc_pdfLink.appendChild(autor);//agrego dentro de la tarjeta completa, agrego el spacio
+  
+  doc_pdfLink.appendChild(autor_tipo_ico);//agrego dentro de la tarjeta completa, enlace de Doc
+  
 
-  literatureCard_p.appendChild(autor_tipo_ico);//agrego dentro de la tarjeta completa, enlace de Doc
-  //crear el div
+  literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
+//crear el div
   let div_literatura = document.createElement("div");
   div_literatura.appendChild(literatureCard_p);//agrego dentro de la tarjeta completa, agrego el p
 
@@ -82,7 +83,9 @@ let autor=document.createElement('span')
 function Fill_All_Literature() {
   //declara
   let books_lit = books_INCA_proy,
-    divContenedor = null;
+  mnl_lit = mnls_INCA_proy,
+  artcl_lit = artcl_INCA_proy
+   ;
   // llenar libros
   let lugar_libro = $('#bks')[0],
     ico_book = { lugar: 'assets/images/icos/book-64.ico', clase: 'ico-img' },
@@ -91,5 +94,19 @@ function Fill_All_Literature() {
     lugar_libro.appendChild(fillLiterature(ico_book, elemBk, ico_people).cloneNode(true))
   }
 
+// llenar manuales
+  let lugar_mnl = $('#mnl')[0],
+    ico_mnl = { lugar: 'assets/images/icos/magazine-64.ico', clase: 'ico-img' }// ,
+    // ico_people = { lugar: 'assets/images/icos/edit-user-64.ico', clase: 'ico-img' }
+  for (const elemMnl of mnl_lit) {
+    lugar_mnl.appendChild(fillLiterature(ico_mnl, elemMnl, ico_people).cloneNode(true))
+  }
 
+// llenar libros
+  let lugar_artcl = $('#artcl')[0],
+    ico_artcl = { lugar: 'assets/images/icos/paper-64.ico', clase: 'ico-img' }
+    
+  for (const elemArt of artcl_lit) {
+    lugar_artcl.appendChild(fillLiterature(ico_artcl, elemArt, ico_people).cloneNode(true))
+  }
 }
