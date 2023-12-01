@@ -23,10 +23,10 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
   literatureCard_p.appendChild(doc_tipo_ico);//agrego dentro de la tarjeta completa, agrego el icono del tipo de Doc
   
   //crear espacio de 5 espacios
-  let doc_spac = document.createElement("span");
-  doc_spac.innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
-
-  literatureCard_p.appendChild(doc_spac);//agrego espacio entre img y vinculo
+  let sp2=document.createElement("span"),sp5=document.createElement("span")
+  sp2.innerHTML ='&nbsp; &nbsp; '
+  sp5.innerHTML ='&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '
+  literatureCard_p.appendChild(sp5);//agrego espacio entre img y vinculo
   
   //dentro de la tarjeta completa, el icono
   let doc_pdfLink = document.createElement("a");
@@ -39,7 +39,7 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
 
   doc_pdfLink.appendChild(doc_tipo_ext_ico);//agrego dentro de la tarjeta completa, agrego el icono del tipo de Doc
 
-  doc_pdfLink.appendChild(document.createElement('span',{innerHHTML:'&nbsp; &nbsp;'}));//agrego espacio entre img y vinculo
+  doc_pdfLink.appendChild(sp2);//agrego espacio entre img y vinculo
 
   //dentro de la tarjeta completa, el icono
   let doc_pdfLink_b = document.createElement("b");
@@ -47,12 +47,15 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
 
   doc_pdfLink.appendChild(doc_pdfLink_b);//agrego dentro de la tarjeta completa, agrego el b
 
-  doc_pdfLink.appendChild(document.createElement('span',{innerHHTML:'&nbsp; &nbsp;'+literatureData.titulo}));//agrego espacio entre img y vinculo
+  let titulo=document.createElement('span')
+  titulo.innerHTML='&nbsp; &nbsp;'+literatureData.titulo
+  doc_pdfLink.appendChild(titulo);//agrego espacio entre img y vinculo
 
   literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
 
-
-  doc_pdfLink.appendChild(doc_spac);//agrego dentro de la tarjeta completa, agrego el spacio
+let autor=document.createElement('span')
+  autor.innerHTML='&nbsp; &nbsp;'+literatureData.autor
+  doc_pdfLink.appendChild(autor);//agrego dentro de la tarjeta completa, agrego el spacio
 
 
   literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
