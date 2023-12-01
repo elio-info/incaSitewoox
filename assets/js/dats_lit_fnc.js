@@ -29,8 +29,8 @@ function fillLiterature(tipo_doc,literatureData,iconDatAutor) {
     
 	 //dentro de la tarjeta completa, el icono
     let autor_tipo_ico= document.createElement("img");
-        autor_tipo_ico.src=icoDatAutor.lugar;//poner icono cargo valor
-    	autor_tipo_ico.class=icoDatAutor.clase;//poner icono clase valor
+        autor_tipo_ico.src=iconDatAutor.lugar;//poner icono cargo valor
+    	autor_tipo_ico.class=iconDatAutor.clase;//poner icono clase valor
 
    		literatureCard_p.appendChild(autor_tipo_ico);//agrego dentro de la tarjeta completa, enlace de Doc
 	//crear el div
