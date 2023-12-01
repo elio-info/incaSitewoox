@@ -141,10 +141,10 @@ function bannerSwitcher() {
     my_img.src=img;   
    
  popUp.showModal();
-   }else{
+   }else{ 
     $('#popUp')[0].className=  "modal-unshow";
     $('#popUp')[0].close();
-    $('#tabSpecialcontent')[0].scrollIntoView({ behavior: 'smooth' });
+//    $('#tabSpecialcontent')[0].scrollIntoView({ behavior: 'smooth' });
 }
     
 
