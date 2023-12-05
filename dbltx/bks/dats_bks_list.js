@@ -1,7 +1,7 @@
 let books_INCA_proy = [
     { 
         autor:"S/N",
-        rutaDoc:"Agricultura Sostenibleconcepto, caracteristicas e importancia",
+        rutaDoc:"Agric Sostenible en Cuba",
         titulo:"Agricultura Sostenible en Cuba.",
         ext:'pdf',
         year:"2010"

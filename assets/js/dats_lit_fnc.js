@@ -3,11 +3,12 @@ let ext_ico_ruta = 'assets/images/cosas/pdf-file.svg'
 
 /**
  * @param {string} tipo_doc donde se pone
+ * @param {string} literatureFolder arreglos de datos 
  * @param {Array} literatureData arreglos de datos 
  * @param {icon} iconDatAutor icono que lleva
  * @void 
  */
-function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
+function fillLiterature(tipo_doc,literatureFolder, literatureData, iconDatAutor) {
   //crear estructura cuerpo tarjeta Documento
   // imagen-tipo-literatura {enlace-doc > imagen-tipo-doc-extension año-doc titulo-doc}
   //                           [autor-doc > imagen-tipo-autor nombre-autor]
@@ -30,7 +31,8 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
   
   //dentro de la tarjeta completa, el icono
   let doc_pdfLink = document.createElement("a");
-  doc_pdfLink.href = literatureData.rutaDoc+literatureData.ext;
+  let realRuta=literatureData.rutaDoc.replaceAll(" ",'%20')
+  doc_pdfLink.href =literatureFolder+ realRuta+"."+literatureData.ext;
 
   //dentro de la tarjeta completa, agrego el icono del tipo extension de Doc
   let doc_tipo_ext_ico = document.createElement("img");
@@ -48,7 +50,7 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
   doc_pdfLink.appendChild(doc_pdfLink_b);//agrego dentro de la tarjeta completa, agrego el b
 
   let titulo=document.createElement('span')
-  titulo.innerHTML='&nbsp; &nbsp;'+literatureData.titulo
+  titulo.innerHTML='&nbsp; &nbsp;'+literatureData.titulo+'&nbsp; &nbsp;'
   doc_pdfLink.appendChild(titulo);//agrego espacio entre img y vinculo
 
   literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
@@ -58,13 +60,13 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
   let autor_tipo_ico = document.createElement("img");
   autor_tipo_ico.src = iconDatAutor.lugar;//poner icono cargo valor
   autor_tipo_ico.className = iconDatAutor.clase;//poner icono clase valor
+   doc_pdfLink.appendChild(autor_tipo_ico);//agrego dentro de la tarjeta completa, enlace de Doc
   
   let autor=document.createElement('span')
-  autor.innerHTML='&nbsp; &nbsp; <i><u>'+literatureData.autor +'</u></i>' 
+  autor.innerHTML='&nbsp; <i><u>'+literatureData.autor +'</u></i>' 
   doc_pdfLink.appendChild(autor);//agrego dentro de la tarjeta completa, agrego el spacio
   
-  doc_pdfLink.appendChild(autor_tipo_ico);//agrego dentro de la tarjeta completa, enlace de Doc
-  
+ 
 
   literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc
 //crear el div
@@ -91,7 +93,7 @@ function Fill_All_Literature() {
     ico_book = { lugar: 'assets/images/icos/book-64.ico', clase: 'ico-img' },
     ico_people = { lugar: 'assets/images/icos/edit-user-64.ico', clase: 'ico-img' }
   for (const elemBk of books_lit) {
-    lugar_libro.appendChild(fillLiterature(ico_book, elemBk, ico_people).cloneNode(true))
+    lugar_libro.appendChild(fillLiterature(ico_book,'dbltx/bks/' ,elemBk, ico_people).cloneNode(true))
   }
 
 // llenar manuales
@@ -99,7 +101,7 @@ function Fill_All_Literature() {
     ico_mnl = { lugar: 'assets/images/icos/magazine-64.ico', clase: 'ico-img' }// ,
     // ico_people = { lugar: 'assets/images/icos/edit-user-64.ico', clase: 'ico-img' }
   for (const elemMnl of mnl_lit) {
-    lugar_mnl.appendChild(fillLiterature(ico_mnl, elemMnl, ico_people).cloneNode(true))
+    lugar_mnl.appendChild(fillLiterature(ico_mnl, 'dbltx/mnks/' ,elemMnl, ico_people).cloneNode(true))
   }
 
 // llenar libros
@@ -107,6 +109,6 @@ function Fill_All_Literature() {
     ico_artcl = { lugar: 'assets/images/icos/paper-64.ico', clase: 'ico-img' }
     
   for (const elemArt of artcl_lit) {
-    lugar_artcl.appendChild(fillLiterature(ico_artcl, elemArt, ico_people).cloneNode(true))
+    lugar_artcl.appendChild(fillLiterature(ico_artcl,  'dbltx/artcl/' ,elemArt, ico_people).cloneNode(true))
   }
 }

@@ -22,7 +22,7 @@ let artcl_INCA_proy= [
     } ,
     { 
         autor:"Segundo Ramiro Mora-Quilismal",
-        rutaDoc:"Biofertilización con bacterias y hongos papa 2021",
+        rutaDoc:"Biofertilizacion con bacterias y hongos papa 2021",
         titulo:"Biofertilización con bacterias solubilizadoras de fósforo y hongos micorrízicos arbusculares en el cultivo de la papa",
         ext:'pdf',
         year:"2021"

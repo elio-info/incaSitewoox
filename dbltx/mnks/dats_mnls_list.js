@@ -65,7 +65,7 @@ let mnls_INCA_proy= [
     ,
     { 
         autor:"Instructivo Técnico del Cultivo del Plátano",
-        rutaDoc:"INSTRUCTIVO TECNICO PLATANO  para edición",
+        rutaDoc:"INSTRUCTIVO TECNICO PLATANO  para edicion",
         titulo:"INSTRUCTIVO TÉCNICO DEL CULTIVO DEL PLÁTANO.",
         ext:'pdf',
         year:"2007"
