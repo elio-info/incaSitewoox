@@ -30,7 +30,7 @@ function fillLiterature(tipo_doc, literatureData, iconDatAutor) {
   
   //dentro de la tarjeta completa, el icono
   let doc_pdfLink = document.createElement("a");
-  doc_pdfLink.href = literatureData.rutaDoc;
+  doc_pdfLink.href = literatureData.rutaDoc+literatureData.ext;
 
   //dentro de la tarjeta completa, agrego el icono del tipo extension de Doc
   let doc_tipo_ext_ico = document.createElement("img");
