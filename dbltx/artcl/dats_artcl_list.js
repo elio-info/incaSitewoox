@@ -49,3 +49,34 @@ let artcl_INCA_proy= [
         year:"2023"
     }   
 ]
+let plega_INCA_proy= [
+    { 
+        autor:"Proyecto",
+        rutaDoc:"Plegable-azofert",
+        titulo:"Azofert",
+        ext:'pdf',
+        year:" -- "
+    } ,
+    { 
+        autor:"Proyecto",
+        rutaDoc:"Plegable-Ecomic",
+        titulo:"Ecomic",
+        ext:'pdf',
+        year:" -- "
+    } ,
+    { 
+        autor:"Proyecto",
+        rutaDoc:"Plegable-pectimorf",
+        titulo:"Pectimorf",
+        ext:'pdf',
+        year:" -- "
+    } ,
+    { 
+        autor:"Proyecto",
+        rutaDoc:"Plegable-quitomax",
+        titulo:"Quitomax",
+        ext:'pdf',
+        year:" -- "
+    } ,
+      
+]

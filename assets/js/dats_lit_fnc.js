@@ -86,7 +86,8 @@ function Fill_All_Literature() {
   //declara
   let books_lit = books_INCA_proy,
   mnl_lit = mnls_INCA_proy,
-  artcl_lit = artcl_INCA_proy
+  artcl_lit = artcl_INCA_proy,
+  pleg_lit=plega_INCA_proy
    ;
   // llenar libros
   let lugar_libro = $('#bks')[0],
@@ -104,11 +105,20 @@ function Fill_All_Literature() {
     lugar_mnl.appendChild(fillLiterature(ico_mnl, 'dbltx/mnks/' ,elemMnl, ico_people).cloneNode(true))
   }
 
-// llenar libros
+// llenar plegables
+  let lugar_pleg = $('#pleg')[0],
+    ico_pleg = { lugar: 'assets/images/icos/paper-64.ico', clase: 'ico-img' }
+    
+  for (const elemPleg of pleg_lit) {
+    lugar_pleg.appendChild(fillLiterature(ico_pleg,  'dbltx/artcl/' ,elemPleg, ico_people).cloneNode(true))
+  }
+
+// llenar arti libros
   let lugar_artcl = $('#artcl')[0],
     ico_artcl = { lugar: 'assets/images/icos/paper-64.ico', clase: 'ico-img' }
     
   for (const elemArt of artcl_lit) {
     lugar_artcl.appendChild(fillLiterature(ico_artcl,  'dbltx/artcl/' ,elemArt, ico_people).cloneNode(true))
   }
+  
 }
