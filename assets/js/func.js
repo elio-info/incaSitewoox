@@ -49,8 +49,8 @@ function toogleViewSigned(ordena,quien){
 	ser.innerHTML=ser.innerHTML.includes("menos")? " Ver m&aacute;s ": " Ver menos ";
 	toogleView(quien);
 }
-
-const navegaCV= typeof equip_INCA_proy ?? Math.trunc(equip_INCA_proy.length/4 ) + 1 //navegacion los CV ["cvpag1","cvpag2","cvpag3"];
+//typeof equip_INCA_proy ??
+const navegaCV=  Math.trunc(equip_INCA_proy.length/4 ) + 1 //navegacion los CV ["cvpag1","cvpag2","cvpag3"];
 let posc_navegaCV=1;
 /**
  * Cambiar visibilidad de los div *  
